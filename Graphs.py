@@ -14,4 +14,11 @@ def depthFirstTi(graph, source):
             stack.append(neighbor)
 
 
-depthFirstTi(graph, "a")
+## Recursive solution
+def depthFirstTr(graph, source):
+    print(source)
+    for neighbor in graph[source]:
+        depthFirstTr(graph, neighbor)
+
+
+depthFirstTr(graph, "a")
